@@ -37,9 +37,9 @@ namespace Tyuiu.SafarovTA.Sprint2.Task2.V30
                 Console.WriteLine();
             }
             Console.WriteLine("* Введите X:                                                                     *");
-            x = Convert.ToInt16(Console.ReadLine()) - 1;
+            x = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("* Введите Y:                                                                     *");
-            y = Convert.ToInt16(Console.ReadLine()) - 1;
+            y = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("**********************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                     *");
             Console.WriteLine("**********************************************************************************");

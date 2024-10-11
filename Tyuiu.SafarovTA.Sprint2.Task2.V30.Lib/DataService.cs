@@ -5,6 +5,8 @@ namespace Tyuiu.SafarovTA.Sprint2.Task2.V30.Lib
     {
         public bool CheckDotInShadedArea(int x, int y)
         {
+            x--;
+            y--;
             bool[,] array = new bool[15, 15];
             for(int i = 0; i < 15; i++)
             {
