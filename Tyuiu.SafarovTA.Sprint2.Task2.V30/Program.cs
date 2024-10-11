@@ -1,41 +1,49 @@
-﻿using Tyuiu.SafarovTA.Sprint2.Task1.V6.Lib;
-namespace Tyuiu.SafarovTA.Sprint2.Task1.V6
+﻿using Tyuiu.SafarovTA.Sprint2.Task2.V30.Lib;
+namespace Tyuiu.SafarovTA.Sprint2.Task2.V30
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            bool[] res = new bool[6];
-            int a = 915, b = 169, c = 174, d = 133;
+            int x, y;
             DataService ds = new DataService();
             Console.WriteLine("**********************************************************************************");
             Console.WriteLine("* Спринт #2                                                                      *");
             Console.WriteLine("* Тема: Базовые навыки работы в C#                                               *");
-            Console.WriteLine("* Задание #1                                                                     *");
-            Console.WriteLine("* Вариант #6                                                                     *");
+            Console.WriteLine("* Задание #2                                                                     *");
+            Console.WriteLine("* Вариант #30                                                                    *");
             Console.WriteLine("* Выполнил: Сафаров Тимур Андреевич | РППБ-24-1                                  *");
             Console.WriteLine("**********************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                       *");
-            Console.WriteLine("* Написать программу из операций сравнений (==, !=, <, >, <=, >=,                *");
-            Console.WriteLine("* последовательность можно чередовать, но использовать один раз в выражении) и   *");
-            Console.WriteLine("* логических операций (|, &, ||, &&, !, ^, последовательность операций не должна *");
-            Console.WriteLine("* нарушаться), а также арифметических выражений, которая вернет логическую       *");
-            Console.WriteLine("* последовательность(массив): (False, False, True, False, True, False),          *");
-            Console.WriteLine("* при a = 915, b = 169, c = 174, d = 133                                         *");
+            Console.WriteLine("* Написать программу на, которая запрашивает целые значения с клавиатуры и       *");
+            Console.WriteLine("* вычисляет находится ли точка с координатами X,Y в заштрихованной области.      *");
             Console.WriteLine("*                                                                                *");
             Console.WriteLine("**********************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                               *");
             Console.WriteLine("**********************************************************************************");
-            Console.WriteLine("* a = 915, b = 169, c = 174, d = 133                                             *");
+            for (int i = 0; i < 15; i++)
+            {
+                for (int j = 1; j < 15; j++)
+                {
+                    if (ds.CheckDotInShadedArea(i, j))
+                    {
+                        Console.Write("#");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("* Введите X:                                                                     *");
+            x = Convert.ToInt16(Console.ReadLine()) - 1;
+            Console.WriteLine("* Введите Y:                                                                     *");
+            y = Convert.ToInt16(Console.ReadLine()) - 1;
             Console.WriteLine("**********************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                     *");
             Console.WriteLine("**********************************************************************************");
-            res = ds.GetLogicOperations(a, b, c, d);
-
-            for (int i = 0; i < res.Length; i++)
-            {
-                Console.WriteLine(res[i]);
-            }
+            Console.WriteLine(ds.CheckDotInShadedArea(x, y));
 
             Console.ReadLine();
         }
