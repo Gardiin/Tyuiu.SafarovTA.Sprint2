@@ -11,7 +11,7 @@ namespace Tyuiu.SafarovTA.Sprint2.Task5.V8.Lib
             }
             if (n > 1)
             {
-                return Convert.ToString(n - 1);
+                return Convert.ToString(n - 1) + "." + Convert.ToString(m);
             }
             switch(m)
             {
@@ -21,14 +21,14 @@ namespace Tyuiu.SafarovTA.Sprint2.Task5.V8.Lib
                 case 8:
                 case 9:
                 case 11:
-                    return "31";
+                    return "31." + Convert.ToString(m);
                 case 5:
                 case 7:
                 case 10:
                 case 12:
-                    return "30";
+                    return "30." + Convert.ToString(m);
                 case 3:
-                    return "28";
+                    return "28.2";
                 default:
                     return "0";
             }
