@@ -10,7 +10,7 @@ namespace Tyuiu.SafarovTA.Sprint2.Task5.V8.Test
             int m = 4;
             int n = 1;
             DataService ds = new DataService();
-            Assert.AreEqual("31", ds.FindDateOfPreviousDay(m, n));
+            Assert.AreEqual("31.03", ds.FindDateOfPreviousDay(m, n));
         }
     }
 }
