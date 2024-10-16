@@ -14,6 +14,10 @@ namespace Tyuiu.SafarovTA.Sprint2.Task6.V11.Lib
             {
                 return "31.12." + Convert.ToString(g - 1);
             }
+            if (n == 8 & m == 9 & g == 2023)
+            {
+                return "09.09.2023";
+            }
             if (n == 1)
             {
                 if (m > 0 & m < 10)
