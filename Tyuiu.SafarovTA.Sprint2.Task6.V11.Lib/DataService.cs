@@ -1,24 +1,28 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
-namespace Tyuiu.SafarovTA.Sprint2.Task5.V8.Lib
+namespace Tyuiu.SafarovTA.Sprint2.Task6.V11.Lib
 {
-    public class DataService : ISprint2Task5V8
+    public class DataService : ISprint2Task6V11
     {
-        public string FindDateOfPreviousDay(int m, int n)
+        public string FindDateOfNextDay(int g, int m, int n)
         {
             string month;
-            if (n < 1 | m > 12 | n > 31 | m < 1 | (m == 1 & n == 1))
+            if (n < 1 | m > 12 | n > 31 | m < 1)
             {
                 return "0";
+            }
+            if (m == 1 & n == 1)
+            {
+                return "31.12." + Convert.ToString(g - 1);
             }
             if (n == 1)
             {
                 if (m > 0 & m < 10)
                 {
-                    month = "." + "0" + Convert.ToString(m - 1);
+                    month = "." + "0" + Convert.ToString(m - 1) + "." + Convert.ToString(g);
                 }
                 else
                 {
-                    month = "." + Convert.ToString(m - 1);
+                    month = "." + Convert.ToString(m - 1) + "." + Convert.ToString(g);
                 }
                 switch (m)
                 {
@@ -35,7 +39,7 @@ namespace Tyuiu.SafarovTA.Sprint2.Task5.V8.Lib
                     case 12:
                         return "30." + month;
                     case 3:
-                        return "28.02";
+                        return "28.02." + Convert.ToString(g);
                     default:
                         return "0";
                 }
@@ -44,11 +48,11 @@ namespace Tyuiu.SafarovTA.Sprint2.Task5.V8.Lib
             {
                 if (m > 0 & m < 10)
                 {
-                    month = "." + "0" + Convert.ToString(m);
+                    month = "." + "0" + Convert.ToString(m) + "." + Convert.ToString(g);
                 }
                 else
                 {
-                    month = "." + Convert.ToString(m);
+                    month = "." + Convert.ToString(m) + "." + Convert.ToString(g);
                 }
                 return Convert.ToString(n - 1) + month;
             }
